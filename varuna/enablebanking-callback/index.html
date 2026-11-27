@@ -1,0 +1,10 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Varuna: Bank-Freigabe</title></head>
+<body style="font-family:sans-serif;max-width:40em;margin:3em auto">
+<p id="m">Leite zu Varuna weiter …</p>
+<script>
+// Reicht die Antwort der Bank (code, state, error) nur an den lokalen Varuna-Server weiter.
+var q = location.search || '';
+if (q) { location.replace('http://127.0.0.1:4780/api/finance/callback' + q); }
+else { document.getElementById('m').textContent = 'Keine Bank-Antwort erhalten.'; }
+</script>
+</body></html>
